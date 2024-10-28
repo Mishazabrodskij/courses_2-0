@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+    background-image: url("photo-1.jpg") ;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+
+  .drop {
+    width: 16px; /* Тонка верхня частина */
+    height: 30px; /* Висота краплі */
+    background-color: #00bfff;
+    position: absolute;
+    top: -50px;
+    border-radius: 60% 60% 50% 50%; /* Заокруглення: круглий верх і ширша нижня частина */
+    transform: scaleX(1.2); /* Невелике розширення нижньої частини */
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0) scaleX(1.2);
+    }
+    100% {
+      transform: translateY(100vh) scaleX(1); /* Падіння з незначною зміною форми */
+    }
+  }
+    </style>
+</head>
+<body>
+<script>
+  function createDrop() {
+    const drop = document.createElement('div');
+    drop.classList.add('drop');
+    drop.style.left = `${Math.random() * 100}vw`;
+    drop.style.animationDuration = `${Math.random() * 2 + 1}s`;
+    document.body.appendChild(drop);
+
+    setTimeout(() => {
+      drop.remove();
+    }, 3000);
+  }
+
+  setInterval(createDrop, 100);
+</script>
+</body>
+</html>
+</body>
+</html>

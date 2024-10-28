@@ -1,0 +1,59 @@
+h1 {
+    background: gold ;
+    color: red;
+    text-align: center;
+}
+h2 {
+    background: gold;
+    color: red;
+    text-align: center;
+}
+p {
+   font-size: 30px;
+}
+ul {
+    font-size: 30px;
+    margin-top: 40px;
+    display: flex ;
+
+
+
+
+}
+li {
+    font-size: 20px;
+
+
+}
+a{
+    text-decoration: none;
+    /*color: aqua;*/
+}
+html , body {
+    scroll-behavior: smooth;
+}
+
+
+.zoom-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.zoom-image {
+    display: block;
+    width: 100%; /* Задайте ширину изображения */
+    height: auto; /* Сохраняет пропорции изображения */
+    transition: transform 0.2s ease; /* Плавный переход при увеличении */
+}
+
+.zoom-lens {
+    position: absolute;
+    border: 3px solid #000; /* Цвет и ширина границы кружка */
+    width: 100px; /* Ширина кружка */
+    height: 100px; /* Высота кружка */
+    border-radius: 50%; /* Делает кружок круглым */
+    pointer-events: none; /* Линза не мешает работе курсора */
+    display: none; /* Скрываем линзу по умолчанию */
+}
+
